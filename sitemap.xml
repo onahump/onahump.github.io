@@ -3,115 +3,47 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://onahump.github.io/public/blog/hello-world/</loc>
+    <loc>http://nahumponce.me/blog/hello-world/</loc>
     <lastmod>2017-11-17T11:42:48-06:00</lastmod>
   </url>
   
   <url>
-    <loc>https://onahump.github.io/public/projects/</loc>
+    <loc>http://nahumponce.me/projects/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url>
   
   <url>
-    <loc>https://onahump.github.io/public/blog/creating-a-new-theme/</loc>
-    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://onahump.github.io/public/blog/goisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://onahump.github.io/public/blog/hugoisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://onahump.github.io/public/blog/migrate-from-jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://onahump.github.io/public/blog/</loc>
+    <loc>http://nahumponce.me/blog/</loc>
     <lastmod>2017-11-17T11:42:48-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://onahump.github.io/public/categories/</loc>
+    <loc>http://nahumponce.me/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://onahump.github.io/public/tags/development/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://onahump.github.io/public/categories/development/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://onahump.github.io/public/tags/go/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://onahump.github.io/public/tags/golang/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://onahump.github.io/public/categories/golang/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://onahump.github.io/public/tags/hugo/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://onahump.github.io/public/</loc>
+    <loc>http://nahumponce.me/</loc>
     <lastmod>2017-11-17T11:42:48-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://onahump.github.io/public/tags/projects/</loc>
+    <loc>http://nahumponce.me/tags/projects/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://onahump.github.io/public/categories/projects/</loc>
+    <loc>http://nahumponce.me/categories/projects/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://onahump.github.io/public/tags/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://onahump.github.io/public/tags/templates/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://onahump.github.io/public/tags/themes/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>http://nahumponce.me/tags/</loc>
+    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
     <priority>0</priority>
   </url>
   
