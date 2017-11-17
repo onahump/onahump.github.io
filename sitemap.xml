@@ -3,46 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://nahumponce.me/blog/hello-world/</loc>
+    <loc>https://onahump.github.io/public/blog/hello-world/</loc>
     <lastmod>2017-11-17T11:42:48-06:00</lastmod>
   </url>
   
   <url>
-    <loc>http://nahumponce.me/projects/</loc>
+    <loc>https://onahump.github.io/public/projects/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
   </url>
   
   <url>
-    <loc>http://nahumponce.me/blog/</loc>
-    <lastmod>2017-11-17T11:42:48-06:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://nahumponce.me/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://nahumponce.me/</loc>
+    <loc>https://onahump.github.io/public/blog/</loc>
     <lastmod>2017-11-17T11:42:48-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://nahumponce.me/tags/projects/</loc>
+    <loc>https://onahump.github.io/public/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://onahump.github.io/public/</loc>
+    <lastmod>2017-11-17T11:42:48-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://onahump.github.io/public/tags/projects/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://nahumponce.me/categories/projects/</loc>
+    <loc>https://onahump.github.io/public/categories/projects/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://nahumponce.me/tags/</loc>
+    <loc>https://onahump.github.io/public/tags/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
     <priority>0</priority>
   </url>

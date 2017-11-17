@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nahúm Ponce</title>
-    <link>http://nahumponce.me/</link>
+    <link>https://onahump.github.io/public/</link>
     <description>Recent content on Nahúm Ponce</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 17 Nov 2017 11:42:48 -0600</lastBuildDate>
     
-	<atom:link href="http://nahumponce.me/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://onahump.github.io/public/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hello World</title>
-      <link>http://nahumponce.me/blog/hello-world/</link>
+      <link>https://onahump.github.io/public/blog/hello-world/</link>
       <pubDate>Fri, 17 Nov 2017 11:42:48 -0600</pubDate>
       
-      <guid>http://nahumponce.me/blog/hello-world/</guid>
+      <guid>https://onahump.github.io/public/blog/hello-world/</guid>
       <description>###Hola a todo el mundo
 Bienvenidos a mi nuevo blog</description>
     </item>
     
     <item>
       <title>Projects</title>
-      <link>http://nahumponce.me/projects/</link>
+      <link>https://onahump.github.io/public/projects/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
       
-      <guid>http://nahumponce.me/projects/</guid>
+      <guid>https://onahump.github.io/public/projects/</guid>
       <description></description>
     </item>
     
