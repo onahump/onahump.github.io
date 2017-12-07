@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Escuela on Nahúm Ponce</title>
+    <link>https://onahump.github.io/categories/escuela/</link>
+    <description>Recent content in Escuela on Nahúm Ponce</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 27 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://onahump.github.io/categories/escuela/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>La verdadera Escuela</title>
+      <link>https://onahump.github.io/blog/la_verdadera_escuela/</link>
+      <pubDate>Mon, 27 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://onahump.github.io/blog/la_verdadera_escuela/</guid>
+      <description>En México hay alrededor de 3.64 millones de estudiantes universitarios entre escuelas públicas y privadas. Cada uno de los estudiantes podría contar su experiencia dependiendo de la carrera en la que se desenvolvió y creo que cada uno tendría una historia distinta por contar de acuerdo al entorno con el que se desarrolla su escuela y su carrera.
+La verdad es que la vida de un estudiante es bastante complicada, siempre tienes que entregar tareas, realizar exposiciones, exámenes, desvelarte para un proyecto que se entrega el siguiente día, pero te dio el famoso mal del estudiante de hacer todo al último (&amp;ldquo;La vida es un riesgo hermano&amp;rdquo;).</description>
+    </item>
+    
+  </channel>
+</rss>

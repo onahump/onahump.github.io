@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nahúm Ponce</title>
+    <link>https://onahump.github.io/</link>
+    <description>Recent content on Nahúm Ponce</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Wed, 06 Dec 2017 18:50:59 -0600</lastBuildDate>
+    
+	<atom:link href="https://onahump.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Um mexicano entre brasileiros</title>
+      <link>https://onahump.github.io/blog/um_mexicano_entre_brasileros/</link>
+      <pubDate>Wed, 06 Dec 2017 18:50:59 -0600</pubDate>
+      
+      <guid>https://onahump.github.io/blog/um_mexicano_entre_brasileros/</guid>
+      <description>Esta semana tuve la visita de un amigo, que vino desde Brasil a conocer México. A él y a otros 4 chicos brasileños los conocí durante el Foro Internacional del Emprendedor México 2017 (FIE) durante el mes de Junio pasado. Desde él inicio del FIE todos ellos se robarán el corazón de la mayoría de los mexicanos que participamos en el foro, debido a que impregnaron una gran energía positiva durante todo el evento, dejando en claro que los brasileños traen la fiesta por dentro y nacen sin un “interruptor” de apagado.</description>
+    </item>
+    
+    <item>
+      <title>La verdadera Escuela</title>
+      <link>https://onahump.github.io/blog/la_verdadera_escuela/</link>
+      <pubDate>Mon, 27 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://onahump.github.io/blog/la_verdadera_escuela/</guid>
+      <description>En México hay alrededor de 3.64 millones de estudiantes universitarios entre escuelas públicas y privadas. Cada uno de los estudiantes podría contar su experiencia dependiendo de la carrera en la que se desenvolvió y creo que cada uno tendría una historia distinta por contar de acuerdo al entorno con el que se desarrolla su escuela y su carrera.
+La verdad es que la vida de un estudiante es bastante complicada, siempre tienes que entregar tareas, realizar exposiciones, exámenes, desvelarte para un proyecto que se entrega el siguiente día, pero te dio el famoso mal del estudiante de hacer todo al último (&amp;ldquo;La vida es un riesgo hermano&amp;rdquo;).</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://onahump.github.io/projects/</link>
+      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
+      
+      <guid>https://onahump.github.io/projects/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

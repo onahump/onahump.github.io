@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Nahúm Ponce</title>
+    <link>https://onahump.github.io/tags/</link>
+    <description>Recent content in Tags on Nahúm Ponce</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 27 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://onahump.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Aprendizaje</title>
+      <link>https://onahump.github.io/tags/aprendizaje/</link>
+      <pubDate>Mon, 27 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://onahump.github.io/tags/aprendizaje/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Escuela</title>
+      <link>https://onahump.github.io/tags/escuela/</link>
+      <pubDate>Mon, 27 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://onahump.github.io/tags/escuela/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://onahump.github.io/tags/projects/</link>
+      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
+      
+      <guid>https://onahump.github.io/tags/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Realidad</title>
+      <link>https://onahump.github.io/tags/realidad/</link>
+      <pubDate>Mon, 27 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://onahump.github.io/tags/realidad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Trabajo</title>
+      <link>https://onahump.github.io/tags/trabajo/</link>
+      <pubDate>Mon, 27 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://onahump.github.io/tags/trabajo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Universidad</title>
+      <link>https://onahump.github.io/tags/universidad/</link>
+      <pubDate>Mon, 27 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://onahump.github.io/tags/universidad/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
