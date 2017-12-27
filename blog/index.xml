@@ -6,10 +6,20 @@
     <description>Recent content in Blogs on Nahúm Ponce</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 20 Dec 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 Dec 2017 22:13:40 -0600</lastBuildDate>
     
 	<atom:link href="https://onahump.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Capítulo 4 - Floating Point Representation</title>
+      <link>https://onahump.github.io/blog/capitulo4_floating_point/</link>
+      <pubDate>Tue, 26 Dec 2017 22:13:40 -0600</pubDate>
+      
+      <guid>https://onahump.github.io/blog/capitulo4_floating_point/</guid>
+      <description>Siguiendo con las reseñas del libro Writing Great Code, ahora hablaremos un poco sobre lo que ha sido el capítulo 4 en el cual conoceremos básicamente como es que trabaja la representación de punto flotante con nuestro programas o sistemas, ayudándonos también a los problemas que este puede provocar.
+Se dice que muchos de los programadores no entienden muy bien este concepto y cuáles son sus limitaciones, por lo que comenzaremos hablando sobre:</description>
+    </item>
     
     <item>
       <title>Writing Great Code: Capítulos 1 &amp; 2 </title>
