@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://onahump.github.io/blog/git_rebase/</loc>
+    <lastmod>2017-12-27T01:23:36-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://onahump.github.io/blog/capitulo4_floating_point/</loc>
     <lastmod>2017-12-26T22:13:40-06:00</lastmod>
   </url>
@@ -35,7 +40,7 @@
   
   <url>
     <loc>https://onahump.github.io/blog/</loc>
-    <lastmod>2017-12-26T22:13:40-06:00</lastmod>
+    <lastmod>2017-12-27T01:23:36-06:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -51,13 +56,13 @@
   </url>
   
   <url>
-    <loc>https://onahump.github.io/categories/escuela/</loc>
+    <loc>https://onahump.github.io/tags/escuela/</loc>
     <lastmod>2017-11-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://onahump.github.io/tags/escuela/</loc>
+    <loc>https://onahump.github.io/categories/escuela/</loc>
     <lastmod>2017-11-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -76,18 +81,18 @@
   
   <url>
     <loc>https://onahump.github.io/</loc>
-    <lastmod>2017-12-26T22:13:40-06:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://onahump.github.io/categories/projects/</loc>
-    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+    <lastmod>2017-12-27T01:23:36-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://onahump.github.io/tags/projects/</loc>
+    <lastmod>2016-10-02T22:55:05-04:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://onahump.github.io/categories/projects/</loc>
     <lastmod>2016-10-02T22:55:05-04:00</lastmod>
     <priority>0</priority>
   </url>
@@ -99,13 +104,13 @@
   </url>
   
   <url>
-    <loc>https://onahump.github.io/categories/rese%C3%B1a/</loc>
+    <loc>https://onahump.github.io/tags/rese%C3%B1a/</loc>
     <lastmod>2017-12-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://onahump.github.io/tags/rese%C3%B1a/</loc>
+    <loc>https://onahump.github.io/categories/rese%C3%B1a/</loc>
     <lastmod>2017-12-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

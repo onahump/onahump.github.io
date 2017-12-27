@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="map[]" />
+    <meta name="description" content="Bienvenido a mi blog personal, da un vistazo a mis post / @onahump ">
+    <link rel="shortcut icon" type="image/x-icon" href="https://onahump.github.io/img/favicon.ico">
+    <title>Git rebase</title>
+    <meta name="generator" content="Hugo 0.24.1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://onahump.github.io/css/main.css" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
+    
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-110309520-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+  </head>
+
+  <body>
+    <div id="wrap">
+
+      
+      <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://onahump.github.io/"><i class="fa fa-home"></i></a>
+    </div>
+    <div id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+        <li><a href="/blog/">BLOG</a></li>
+        
+        <li><a href="/projects/">PROJECTS</a></li>
+        
+        <li><a href="/resume/">RESUME</a></li>
+        
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      
+      <div class="container">
+        <div class="blog-post">
+          <h3>
+            <strong><a href="https://onahump.github.io/blog/git_rebase/">Git rebase</a></strong>
+          </h3>
+        </div>
+        <div class="blog-title">
+          <h4>
+          December 27, 2017
+            &nbsp;&nbsp;
+            
+          </h4>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              <p>Hace 1 semana tuve la fortuna de tomar un curso en el cual nos enseñaron un poco de Git, una herramienta que ha tomado mucha fuerza en el desarrollo de software y la cual es verdaderamente poderosa.</p>
+
+<p>La verdad es que anteriormente ya había manejado este controlador de versiones y uno de los puntos que más se me dificultaba, era entender la parte del rebase. Por lo que el verlo durante el curso fue un gran suspiro de alivio para futuros proyectos.</p>
+
+<p>Básicamente el rebase tiene que ver con el branching por lo que si tenemos que ramificar un proyecto y tomar cambios de otras ramas será nuestro perfecto aleado. Sigamos el siguiente ejemplo para exponer un caso de mejor forma:</p>
+
+<p>Creamos un directorio e iniciamos nuestro repo de git para poner manos a la obra.</p>
+
+<pre><code>➜  Documents mkdir practices-git    
+➜  Documents cd practices-git  
+➜  practices-git git init 
+Initialized empty Git repository in /home/user/Documents/practices-git/.git/ 
+➜  practices-git git:(master)    
+
+</code></pre>
+
+<p>Ahora creemos un archivo html vacío dentro de este repositorio.</p>
+
+<pre><code>&lt;!DOCTYPE html&gt; 
+
+&lt;html lang=&quot;en&quot;&gt; 
+
+    &lt;head&gt; 
+
+        &lt;h1&gt;Hola mundo&lt;/h1&gt; 
+
+    &lt;/head&gt; 
+    &lt;body&gt; 
+    &lt;/body&gt; 
+
+&lt;/html&gt; 
+
+</code></pre>
+
+<p>Dejando nuestra carpeta de la siguiente manera</p>
+
+<pre><code> ▾ practices-git/ 
+     index.html 
+</code></pre>
+
+<p>No queda más que verificar nuestros cambios, agregar nuestro archivo y comprometerlo para ir a nuestro siguiente paso</p>
+
+<pre><code>➜  practices-git git:(master) gst   
+
+On branch master 
+No commits yet 
+
+Untracked files: 
+
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)   
+
+    index.html 
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track) 
+
+➜  practices-git git:(master) ✗ git add index.html  
+➜  practices-git git:(master) ✗ gcmsg &quot;Agregando index.html&quot;   
+[master (root-commit) 21c3fb0] Agregando index.html 
+1 file changed, 9 insertions(+) 
+create mode 100644 index.html 
+
+</code></pre>
+
+<p>Crearemos un nuevo branch, el cual nombraremos css y en el cual agregaremos nuestro archivo <code>style.css</code> y realizamos unos pequeños cambios a nuestro h1.</p>
+
+<pre><code>h1{  
+
+    font-size:50px;  
+	background-color: yellow;  
+
+} 
+
+</code></pre>
+
+<p>También modificaremos nuestro <code>index.html</code> agregándole la referencia de nuestro css de la siguiente manera.</p>
+
+<pre><code>&lt;!DOCTYPE html&gt; 
+
+&lt;link href=&quot;css/style.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;  //Agregando referencia de nuestro css 
+  
+&lt;html lang=&quot;en&quot;&gt; 
+    &lt;head&gt; 
+        &lt;h1&gt;Hola mundo&lt;/h1&gt; 
+    &lt;/head&gt; 
+    &lt;body&gt; 
+    &lt;/body&gt; 
+
+&lt;/html&gt; 
+</code></pre>
+
+<p>Ahora solamente guardamos, agregamos y hacemos commit de nuestros cambios.</p>
+
+<pre><code>➜  css git:(css) gst 
+
+On branch css 
+Changes not staged for commit: 
+
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed) 
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory) 
+
+    modified:   ../index.html   
+
+Untracked files: 
+
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed) 
+
+ 
+    ./ 
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;) 
+
+➜  css git:(css) ✗ git add ../index.html 
+➜  css git:(css) ✗ gcmsg &quot;Agregando referencia de nuestro css&quot; 
+[css bb4b654] Agregando referencia de nuestro css 
+1 file changed, 2 insertions(+) 
+➜  css git:(css) ✗ git add ./ 
+➜  css git:(css) ✗ gcmsg &quot;Agregando nuestro style.css&quot; 
+[css 4971b29] Agregando nuestro style.css 
+1 file changed, 4 insertions(+) 
+create mode 100644 css/style.css 
+
+</code></pre>
+
+<p>Por el momento la estructura de nuestro archivo quedara de la siguiente forma:</p>
+
+<pre><code> ▾ practices-git/ 
+     ▾ css/ 
+         /* style.css 
+     &lt;&gt; index.html 
+</code></pre>
+
+<p>Ahora nos cambiaremos a nuestra rama master con el siguiente comando</p>
+
+<pre><code>git checkout master 
+</code></pre>
+
+<p>Y repetiremos el mismo paso que hicimos con el css pero ahora agregando nuestro archivos js, quedando de la siguiente manera</p>
+
+<pre><code>➜  practices-git git:(master) gco -b js 
+Switched to a new branch 'js' 
+➜  practices-git git:(js) mkdir js 
+➜  practices-git git:(js) gst      
+
+On branch js 
+
+Changes not staged for commit: 
+  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed) 
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory) 
+
+    modified:   index.html 
+
+Untracked files: 
+
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed) 
+
+    js/ 
+
+no changes added to commit (use &quot;git add&quot; and/or &quot;git commit -a&quot;) 
+
+➜  practices-git git:(js) ✗ git add index.html  
+➜  practices-git git:(js) ✗ gcmsg &quot;referenciando script y agregando button&quot; 
+[js c186615] referenciando script y agregando button 
+1 file changed, 4 insertions(+) 
+➜  practices-git git:(js) ✗ gst 
+
+On branch js 
+
+Untracked files: 
+
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed) 
+    
+    js/ 
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track) 
+
+➜  practices-git git:(js) ✗ git add js/ 
+➜  practices-git git:(js) ✗ gcmsg &quot;Agregando MyScript.js&quot; 
+[js ee5e1f7] Agregando MyScript.js 
+1 file changed, 3 insertions(+) 
+create mode 100644 js/myScript.js 
+➜  practices-git git:(js) 
+
+</code></pre>
+
+<p>Agrego el archivo <code>myScript.js</code>:</p>
+
+<pre><code>
+function myFunction() { 
+   document.getElementById(&quot;demo&quot;).innerHTML = &quot;Paragraph changed.&quot;; 
+} 
+
+</code></pre>
+
+<p>La modificación que se le hizo al <code>index.html</code></p>
+
+<pre><code>
+&lt;!DOCTYPE html&gt; 
+
+  &lt;html lang=&quot;en&quot;&gt; 
+
+    &lt;head&gt; 
+        &lt;h1&gt;Hola mundo&lt;/h1&gt; 
+    &lt;/head&gt; 
+    &lt;body&gt; 
+
+        &lt;p id=&quot;demo&quot;&gt;A Paragraph.&lt;/p&gt; 
+
+        &lt;button type=&quot;button&quot; onclick=&quot;myFunction()&quot;&gt;Puchame&lt;/button&gt; 
+
+        &lt;script src=&quot;myScript.js&quot;&gt;&lt;/script&gt; 
+    &lt;/body&gt; 
+&lt;/html&gt;  
+
+</code></pre>
+
+<p>Y la estructura de nuestro  <code>branch js</code></p>
+
+<pre><code> ▾ practices-git/ 
+     ▾ js/ 
+         /* myScript.js 
+     &lt;&gt; index.html   
+</code></pre>
+
+<p>Ahora toca realizar la parte interesante, en la cual aplicaremos por primera vez nuestro rebase, por lo que nos mantendremos en nuestro <code>branch js</code> y escribiremos lo siguiente en nuestra línea de comandos:</p>
+
+<pre><code>git rebase css   
+</code></pre>
+
+<p>Como podrás ver ahora ya tienes los cambios de nuestro <code>branch css</code> dentro de nuestro <code>branch js</code></p>
+
+<pre><code>
+➜  practices-git git:(js) git rebase css 
+
+First, rewinding head to replay your work on top of it... 
+
+Applying: referenciando script y agregando button 
+
+Applying: Agregando MyScript.js 
+
+➜  practices-git git:(js) ls 
+
+css  index.html  js 
+
+➜  practices-git git:(js)   
+
+</code></pre>
+
+<blockquote>
+<p>Y.…¿Como fue que esto sucedió?</p>
+</blockquote>
+
+<p>Te lo mostrare con la siguiente imagen.</p>
+
+<p><center>
+    <img class="special-img-class" src="/img/rebase/rebase.gif" width="850" /><br />
+</center></p>
+
+<p>Como podrás ver en la imagen primero creamos nuestro <code>branch css</code> e hicimos algunos commits, después nuestro <code>branch js</code> e igual realizamos algunos commits. Después realizamos nuestro rebase cuando estábamos posicionados en el <code>branch js</code> para llevar todos los cambios que teníamos en esta rama sobre el <code>branch css</code>.</p>
+
+<p>Lo cierto es que existen muchos tipos de rebase, pero primordialmente esta es la forma más sencilla de realizar un rebase para poder tomar los cambios que hemos realizado en otras ramas y adecuarlo a la que nosotros requeramos en un futuro o al mismo <code>branch master</code>.</p>
+
+<p>Espero que te haya servido esta explicación, si llegaras a tener alguna duda u observación con respecto a mi post puedes contactarme como @onahump en twitter y github.</p>
+
+              <hr>
+              <div class="related-posts">
+                <h5>Related Posts</h5>
+                
+              </div>
+            </div>
+          </div>
+          <hr>
+        <div class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+
+    (function() {
+      
+      
+      if (window.location.hostname == "localhost")
+        return;
+
+      var disqus_shortname = '';
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+        </div>
+      </div>
+      
+    </div>
+
+    
+    <footer>
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io/">Hugo</a> and
+      <a href="http://www.github.com/nurlansu/hugo-sustain/">sustain</a> with ♥</p>
+    </div>
+  </div>
+</footer>
+<div class="footer"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://onahump.github.io/js/docs.min.js"></script>
+<script src="https://onahump.github.io/js/main.js"></script>
+
+<script src="https://onahump.github.io/js/ie10-viewport-bug-workaround.js"></script><!-- Syntax highlighting -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+    
+  </body>
+</html>

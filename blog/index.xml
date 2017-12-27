@@ -6,10 +6,20 @@
     <description>Recent content in Blogs on Nahúm Ponce</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 26 Dec 2017 22:13:40 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 27 Dec 2017 01:23:36 -0600</lastBuildDate>
     
 	<atom:link href="https://onahump.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git rebase</title>
+      <link>https://onahump.github.io/blog/git_rebase/</link>
+      <pubDate>Wed, 27 Dec 2017 01:23:36 -0600</pubDate>
+      
+      <guid>https://onahump.github.io/blog/git_rebase/</guid>
+      <description>Hace 1 semana tuve la fortuna de tomar un curso en el cual nos enseñaron un poco de Git, una herramienta que ha tomado mucha fuerza en el desarrollo de software y la cual es verdaderamente poderosa.
+La verdad es que anteriormente ya había manejado este controlador de versiones y uno de los puntos que más se me dificultaba, era entender la parte del rebase. Por lo que el verlo durante el curso fue un gran suspiro de alivio para futuros proyectos.</description>
+    </item>
     
     <item>
       <title>Capítulo 4 - Floating Point Representation</title>
