@@ -6,10 +6,20 @@
     <description>Recent content on Nahúm Ponce</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 27 Dec 2017 01:23:36 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jan 2018 00:55:12 -0600</lastBuildDate>
     
 	<atom:link href="https://onahump.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Capítulo 5 - Character Representation</title>
+      <link>https://onahump.github.io/blog/capitulo5_character_representation/</link>
+      <pubDate>Wed, 03 Jan 2018 00:55:12 -0600</pubDate>
+      
+      <guid>https://onahump.github.io/blog/capitulo5_character_representation/</guid>
+      <description>Durante esta semana, estuve leyendo mas acerca del libro de Writing Great Code, por lo que ahora continue con el capítulo 5, el cual habla sobre la representación de caracteres. Durante la lectura te vas adentrando demasiado a como es que funcionan los caracteres y cual es su propósito.
+Ademas de que puede ampliar tu panorama, entendiendo un poco sobre las ventajas y desventajas que puedes encontrar al utilizar los distintos tipos de caracteres.</description>
+    </item>
     
     <item>
       <title>Git rebase</title>
