@@ -6,10 +6,20 @@
     <description>Recent content on Nahúm Ponce</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 03 Jan 2018 00:55:12 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jan 2018 00:35:06 -0600</lastBuildDate>
     
 	<atom:link href="https://onahump.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Capítulo 6 - Memory Organization and Access</title>
+      <link>https://onahump.github.io/blog/capitulo_6/</link>
+      <pubDate>Wed, 10 Jan 2018 00:35:06 -0600</pubDate>
+      
+      <guid>https://onahump.github.io/blog/capitulo_6/</guid>
+      <description>Los componentes Básicos del sistema A lo largo de la historia de la computación han existido distintas arquitecturas de sistemas, pero en la actualidad la principal ha sido la arquitectura de John Van Newman (VNA). Demasiados sistemas ocupan dicha arquitectura, como por ejemplo la familia 80X86. Esta arquitectura esta dividida en 3 componente principales:
+ Unidad Central de Procesamiento (CPU) - Calcula todas las operaciones que ocurren en un sistema.</description>
+    </item>
     
     <item>
       <title>Capítulo 5 - Character Representation</title>
