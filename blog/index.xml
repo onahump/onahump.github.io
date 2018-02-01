@@ -6,10 +6,24 @@
     <description>Recent content in Blogs on Nahúm Ponce</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 10 Jan 2018 00:35:06 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 01 Feb 2018 00:35:06 -0600</lastBuildDate>
     
 	<atom:link href="https://onahump.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Capítulo 7&amp;8 - Types &amp; Boolean Logic</title>
+      <link>https://onahump.github.io/blog/capitulo_7/</link>
+      <pubDate>Thu, 01 Feb 2018 00:35:06 -0600</pubDate>
+      
+      <guid>https://onahump.github.io/blog/capitulo_7/</guid>
+      <description>Pointer types Un apuntador es una variable de memoria que hace referencia a la direccion de un algun objeto.
+Ejemplo:
+ i = 0;
+M [ i ] = 100;
+ Un puntero es la abstraccion de una direccion de memoria, por lo que un lenguaje podria ocupar el puntero como un mecanismo que asigne el valor del puntero a la direccion de algun elemento de la memoria.
+Ademas los punteros hacen referenca a variables anonimas que estan alojadas en el heap (cabecero), la cual es la region reervada para el amacenamiento dinamico de la memoria.</description>
+    </item>
     
     <item>
       <title>Capítulo 6 - Memory Organization and Access</title>
