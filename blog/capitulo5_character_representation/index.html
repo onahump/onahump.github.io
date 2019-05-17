@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Nahum Ponce" />
+    <meta name="description" content="Bienvenido a mi blog personal, da un vistazo a mis post / @onahump ">
+    <link rel="shortcut icon" type="image/x-icon" href="https://onahump.github.io/img/favicon.ico">
+    <title>Capítulo 5 - Character Representation</title>
+    <meta name="generator" content="Hugo 0.40.1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="https://onahump.github.io/css/vitae-skeleton.css" />
+    <link rel="stylesheet" type="text/css" href="https://onahump.github.io/css/vitae-layout.css" />
+    <link rel="stylesheet" type="text/css" href="https://onahump.github.io/css/sustain-main.css" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
+    
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-110309520-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+  </head>
+
+  <body>
+    <div id="wrap">
+
+      
+      <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://onahump.github.io/"><i class="fa fa-home"></i></a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+        <li><a href="/blog/">BLOG</a></li>
+        
+        <li><a href="/projects/">PROJECTS</a></li>
+        
+        <li><a href="/vitae/">RESUME</a></li>
+        
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      
+      <div class="container">
+        <div class="blog-post">
+          <h3>
+            <strong><a href="https://onahump.github.io/blog/capitulo5_character_representation/">Capítulo 5 - Character Representation</a></strong>
+          </h3>
+        </div>
+        <div class="blog-title">
+          <h4>
+          January 3, 2018
+            &nbsp;&nbsp;
+            
+          </h4>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              
+
+<p>Durante esta semana, estuve leyendo mas acerca del libro de Writing Great Code, por lo que ahora continue con el capítulo 5, el cual habla sobre la representación de caracteres. Durante la lectura te vas adentrando demasiado a como es que funcionan los caracteres y cual es su propósito.</p>
+
+<p>Ademas de que puede ampliar tu panorama, entendiendo un poco sobre las ventajas y desventajas que puedes encontrar al utilizar los distintos tipos de caracteres.</p>
+
+<p>Pero para plantearnos ¿Como es que funcionan los caracteres?, primero debimo habernos preguntado:</p>
+
+<blockquote>
+<p>¿Qué es un carácter?</p>
+</blockquote>
+
+<p>Un carácter es cualquier símbolo que tu puedes escribir en el teclado de tu computadora y se puede visualizar en el display.</p>
+
+<hr />
+
+<h2 id="character-data">Character Data</h2>
+
+<p>Existen distintos tipos de estándares que nos permiten la representación de caracteres, de entre los cuales los mas famosos son:</p>
+
+<ol>
+<li>ASCII</li>
+<li>EBCDI</li>
+<li>UNICODE</li>
+</ol>
+
+<h3 id="ascii-american-standard-code-for-information-interchange">ASCII ( American Standard Code for Information Interchange)</h3>
+
+<p>Este estándar cuenta con un total de 128 caracteres sin signo del 0 al 127 ($0 .. $7F) pero este se puede extender 128 caracteres mas, llegando a los 256 caracteres ($80 .. $FF).</p>
+
+<p>Estos caracteres se dividen en 4 grupos, los cuales son:</p>
+
+<p><strong>Grupo 1 - Caracteres de control ($0 .. $1F)</strong></p>
+
+<blockquote>
+<p>Estos caracteres permiten la comunicación con las entradas y salidas de un un sistema, como lo podría ser la interacción con una impresora por dar un ejemplo.</p>
+</blockquote>
+
+<p><strong>Grupo 2 - Símbolos de puntuación y números</strong></p>
+
+<blockquote>
+<p>Son los caracteres especiales como el espacio, ademas de los dígitos numéricos los cuales son representados del $30 .. $39.   Grupo 3 - Abecedario en mayúsculas. ($41 .. $5A)</p>
+</blockquote>
+
+<p><strong>Grupo 3 - Abecedario en mayúsculas.</strong></p>
+
+<blockquote>
+<p>Este conjunto representa los 26 caracteres  del alfabeto  (A a la Z en mayúscula), también dentro del conjunto se encuentran 6 símbolos especiales.</p>
+</blockquote>
+
+<p><strong>Grupo 4 - Abecedario en minúsculas.</strong></p>
+
+<blockquote>
+<p>Esta dividido casi de la misma manera que el anterior, solo que se diferencia en vez de 6 símbolos especiales son 5 símbolos y 1 dedicado para el borrado o eliminación.</p>
+</blockquote>
+
+<p>De forma mas vizual veremos la diferencia entre un caracter del alfabeto del grupo 3 y grupo 4.</p>
+
+<p><center>
+    <img class="special-img-class" src="/img/capitulo5/c5_1.png" width="400" />
+</center></p>
+
+<p>ASCII garantiza la compatibilidad entre sistemas debido a que podría ser el más ocupado en la actualidad.</p>
+
+<h4 id="extended-binary-decimal-interchange-code-ebcdi">Extended Binary Decimal Interchange Code ( EBCDI )</h4>
+
+<p>EBCDI es un conjunto de caracteres que tiene un núcleo en común. un ejemplo de ello es que los caracteres alfabéticos existe en distintas versiones del EBCDI que también contiene codificaciones de los signos de puntuación. Otro de los datos interesantes es que dicho estándar es usado en los mainframes y mini computadores de IBM, ademas de que es una extension del BCDIC.</p>
+
+<h4 id="double-byte-characters">Double-Byte Characters</h4>
+
+<p>Este estándar surgió ante la necesidad de representar mas de 256 caracteres,por lo que usa un byte para representar la mayoría de sus caracteres y 2 bytes para representar ciertos caracteres.</p>
+
+<p>Los caracteres típicos se encuentran en un rango del $80 .. $FF. Algunos de ellos indican que un segundo byte sigue inmediatamente, esto significa que por cada byte extra se obtiene una extension de 256 caracteres mas. Por otra parte Double-Byte Characters puede representar hasta 1021 caracteres. Pero no todo es miel sobre hojuelas, debido a que también tiene sus problemas:</p>
+
+<ol>
+<li>Es complicado trabajar con el</li>
+<li>Para conocer que carácter ocupa 2 bytes se tiene que recorrer toda la cadena<br /></li>
+</ol>
+
+<h3 id="unicode">UNICODE</h3>
+
+<p>Es el estándar internacional adoptado para mostrar mas de 256 caracteres a la vez. UNICODE usa una palabra de 16-bit para representar cada carácter, por lo tanto acepta hasta 65,536 códigos de carácter diferente.  UNICODE es compatible con ASCII. Actualmente es ocupado por Windows internamente ayudando a eficiente sus procesos del Sistema Operativo.</p>
+
+<p>Desventajas:</p>
+
+<ul>
+<li>Los datos requieren el doble de memoria para ser representados a comparación del ASCII.</li>
+<li>La mayoría de los datos del mundo ocupan ASCII o EBCDIC por lo que se puede perder mucho a la hora de realizar conversiones.</li>
+</ul>
+
+<hr />
+
+<h2 id="character-string-formats">Character String formats</h2>
+
+<p>Existen distintos tipos de formatos de cadenas de caracteres, pero dentro de ellas hay diferencias, como el que algunas permiten menor uso de memoria, otros permiten acelerar el procesamiento, mientras algunos son mas maniobrables y por último, algunos agregan mayor funcionalidad a la hora de programar.</p>
+
+<p>Entre estos tipos estan los siguientes:</p>
+
+<h4 id="zero-terminated-strings">Zero-Terminated Strings</h4>
+
+<p>Esta es la representación mas común strings, ya que es la muestra nativa en C, C++ y Java. La secuencia de este formato esta distribuida de tal forma que cuenta con 0 o más caracteres de 8-bit (1 byte cada carácter) seguido de un byte 0.</p>
+
+<p>Ventajas:</p>
+
+<ul>
+<li>Puede representar cadenas de cualquier longitud con un byte e sobrecarga.</li>
+<li>Disponibilidad para distintos lenguajes de programación debido a su popularidad.</li>
+<li>Fácil de implementar y representación.</li>
+</ul>
+
+<p>Desventajas:</p>
+
+<ul>
+<li>No son muy eficientes en terminación cero debido a que es necesario conocer la longitud de la cadena, lo que provoca un escaneo de la cadena de inicio a fin alentando su funcionamiento.</li>
+<li>No se puede representar ningún carácter cuyo valor sea 0 (Ejemplo : NUL o NULL).</li>
+<li>La concatenación puede extender la longitud de una variable provocando desbordamiento.</li>
+</ul>
+
+<h4 id="lengh-prefix-strings">Lengh-Prefix Strings</h4>
+
+<p> Es muy común en el lenguaje Pascal, consiste en 1 byte que especifica la longitud seguido de los demás bytes generados por la cadena, por ejemplo:</p>
+
+<blockquote>
+<p>&ldquo;abc&rdquo; = 1 byte de la longitud + 3 bytes por cada carácter, dando un total de 4 bytes</p>
+</blockquote>
+
+<p>Ventajas:</p>
+
+<ul>
+<li>Resuelve problemas de las cadenas en terminación cero, como la representación del carácter nulo agregando mayor eficiencia.</li>
+<li>Soluciona el problema de longitud, mostrando esta en la posición 0 de la cadena.</li>
+</ul>
+
+<p>Desventajas:</p>
+
+<ul>
+<li>Esta limitada a un conjunto máximo de 255 caracteres, se pierde uno debido al byte ocupado para la longitud.</li>
+<li>Puede dar solución al problema anterior agregando de 2 a 4 bytes pero causando otro problema que afecta directamente al almacenamiento en la memoria.</li>
+</ul>
+
+<h4 id="seven-bit-strings">Seven-Bit Strings</h4>
+
+<p>Este formato consiste en usar el bit HO para indicar el fin de una cadena, esto sucede debido a que el único bit establecido en este tipo de cadena es el HO. Este formato es muy ocupado en el Leguaje Ensamblador.</p>
+
+<p>Ventajas:</p>
+
+<ul>
+<li>No requiere un byte extra o de sobrecarga  para codificar la longitud<br /></li>
+</ul>
+
+<p>Desventajas:</p>
+
+<ul>
+<li>Escaneo de toda la cadena para determinar la longitud.</li>
+<li>No puede tener cadenas de longitud cero.</li>
+<li>Pocos lenguajes usan este formato.</li>
+<li>Limitado a un máximo de 128 caracteres</li>
+</ul>
+
+<h4 id="hla">HLA</h4>
+
+<p>El HLA combina las ventajas de Lengh-Prefix Strings y Zero-Terminated Strings a costa de la sobrecarga en la cadena. Pero esto afecta directamente en el uso de la memoria, si es que llegara a existir una restricción en ella. El formato HLA esta compuesto de la siguiente forma:</p>
+
+<p><center>
+    <img class="special-img-class" src="/img/capitulo5/c5_2.png" width="550" />
+</center></p>
+
+<ul>
+<li><p>Prefijo (4 bytes) -&gt; Permite que los caracteres tenga la posibilidad de más de 4 mil millones de caracteres.</p></li>
+
+<li><p>Bit-0 (1 byte) -&gt; Terminación de la cadena con un bit 0</p></li>
+
+<li><p>Longitud (4 bytes) -&gt; Permite saber la longitud de la cadena.</p></li>
+
+<li><p>Longitud Máxima (4 bytes) -&gt; Determina la longitud máxima que puede alcanzar la cadena en caso de que exista algún cambio.</p></li>
+</ul>
+
+<h3 id="types-of-strings">Types of Strings</h3>
+
+<h4 id="static">Static</h4>
+
+<p>Son aquellos cuyo tamaño máximo es elegido por el programador, por ejemplo:</p>
+
+<p>char String[26] -&gt; Se asigna una longitud de 26 caracteres.</p>
+
+<h4 id="pseudo-dynamic-string">Pseudo-Dynamic String</h4>
+
+<p>Funciona de forma similar al formato HLA, en donde el sistema establece la longitud en tiempo de ejecución, asignando automáticamente la memoria que se va a necesitar</p>
+
+<h4 id="dynamic">Dynamic</h4>
+
+<p>Son aquellas a las cuales se les asigna el almacenamiento suficiente de acuerdo a la cadena sin importar que esta se ajuste o cambie.</p>
+
+<p>Lo malo de este tipo es que se puede recolectar basura ocasionada por los cambios que se realicen a la longitud del string.</p>
+
+<hr />
+
+<h2 id="character-sets">Character Sets</h2>
+
+<p>Un conjunto de caracteres esta conformado por un conjunto matemático de caracteres los cuales permiten realizar operaciones de acuerdo al tipo de carácter</p>
+
+<p><center>
+    <img class="special-img-class" src="/img/capitulo5/c5_3.png" width="700" />
+</center></p>
+
+<p>Existen muchas formas de representar un conjunto de cadenas, una de ellas es a través de valores booleanos para determinar si un carácter pertenece a un conjunto de caracteres, en donde:</p>
+
+<pre><code>true =  El carácter pertenece al conjunto de caracteres.
+false = El carácter no pertenece al conjunto de caracteres. 
+</code></pre>
+
+<p>Otro de los puntos importantes es que se asigna un bit para cada carácter en un conjunto de caracteres, por lo tanto un conjunto consiste en 128 bites (16 bytes).</p>
+
+<p>Si un conjunto de datos es muy pequeño la manera de representarlos es a través de una cadena de caracteres.</p>
+
+<p>Pero si un conjunto de dato es muy grande entonces la mejor manera de representarlos es por medio de una lista de conjunto de caracteres.</p>
+
+<p>La verdad es que todo lo mencionado anteriormente es de suma importancia a la hora de escribir código, ya que como programador no tomamos en cuenta las consecuencias que pueden pasar o el como es que funcionan los caracteres, ya que parece algo normal en nuestro día a día a la hora de teclear código.</p>
+
+<p>Si llegaras a no estar de acuerdo con algún punto de vista en la reseña con gusto me puedes contactar como <strong>@onahump</strong> en twitter y github.</p>
+
+              <hr>
+              <div class="related-posts">
+                <h5>Related Posts</h5>
+                
+              </div>
+            </div>
+          </div>
+          <hr>
+        <div class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+
+    (function() {
+      
+      
+      if (window.location.hostname == "localhost")
+        return;
+
+      var disqus_shortname = '';
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+        </div>
+      </div>
+      
+    </div>
+
+    
+    <footer>
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io/">Hugo</a> and
+      <a href="https://github.com/anirbanmu/hugo-sustain-vitae">sustain-vitae</a> with ♥</p>
+    </div>
+  </div>
+</footer>
+<div class="footer"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://onahump.github.io/js/docs.min.js"></script>
+<script src="https://onahump.github.io/js/main.js"></script>
+
+<script src="https://onahump.github.io/js/ie10-viewport-bug-workaround.js"></script><!-- Syntax highlighting -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  </body>
+</html>

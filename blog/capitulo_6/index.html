@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Nahum Ponce" />
+    <meta name="description" content="Bienvenido a mi blog personal, da un vistazo a mis post / @onahump ">
+    <link rel="shortcut icon" type="image/x-icon" href="https://onahump.github.io/img/favicon.ico">
+    <title>Capítulo 6 - Memory Organization and Access</title>
+    <meta name="generator" content="Hugo 0.40.1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="https://onahump.github.io/css/vitae-skeleton.css" />
+    <link rel="stylesheet" type="text/css" href="https://onahump.github.io/css/vitae-layout.css" />
+    <link rel="stylesheet" type="text/css" href="https://onahump.github.io/css/sustain-main.css" /><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/tomorrow.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,200bold,400old" />
+    
+    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-110309520-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+  </head>
+
+  <body>
+    <div id="wrap">
+
+      
+      <nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://onahump.github.io/"><i class="fa fa-home"></i></a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+        <li><a href="/blog/">BLOG</a></li>
+        
+        <li><a href="/projects/">PROJECTS</a></li>
+        
+        <li><a href="/vitae/">RESUME</a></li>
+        
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
+      
+      <div class="container">
+        <div class="blog-post">
+          <h3>
+            <strong><a href="https://onahump.github.io/blog/capitulo_6/">Capítulo 6 - Memory Organization and Access</a></strong>
+          </h3>
+        </div>
+        <div class="blog-title">
+          <h4>
+          January 10, 2018
+            &nbsp;&nbsp;
+            
+          </h4>
+        </div>
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="blogpost">
+              
+
+<h2 id="los-componentes-básicos-del-sistema">Los componentes Básicos del sistema</h2>
+
+<p>A lo largo de la historia de la computación han existido distintas <code>arquitectura</code>s de sistemas, pero en la actualidad la principal ha sido la <code>arquitectura</code> de <code>John Van Newman (VNA)</code>. Demasiados sistemas ocupan dicha <code>arquitectura</code>, como por ejemplo la familia 80X86. Esta <code>arquitectura</code> esta dividida en 3 componente principales:</p>
+
+<ol>
+<li><strong>Unidad Central de Procesamiento (CPU)</strong> - Calcula todas las operaciones que ocurren en un sistema.</li>
+<li><strong><code>Memoria</code></strong> - Todos los datos residen  dentro de la <code>memoria</code>, asi como las instrucciones principales.</li>
+<li><strong>Entradas y Salidas (E/S)</strong> - Son todos aquellos elementos o hardware que nos permite interactuar con el sistema como teclado,mouse etc&hellip;</li>
+</ol>
+
+<p><center>
+    <img class="special-img-class" src="/img/capitulo6/c_1.png" width="400" />
+</center></p>
+
+<hr />
+
+<h3 id="el-bus-del-sistema">El bus del Sistema</h3>
+
+<p>Un bus es una colección de cables que transportan datos y por el cual pasan señales electricas, ademas el bus del sistema conecta los componentes que existen en el <code>VNA</code> y se divide en 3 buses principales:</p>
+
+<ul>
+<li>Bus de dirección</li>
+<li>Bus de datos</li>
+<li>Bus de control</li>
+</ul>
+
+<hr />
+
+<h4 id="bus-de-datos">Bus de Datos</h4>
+
+<p>El CPU usa el bus de datos para mezclar o intercambiar datos entre los componentes. Actualmente la mayoria de los <code>CPU's</code> usan un bus de datos de 32 bits o de 64 bits de ancho, pero pueden existir de 8 - 16 bits o hasta 128 bits.</p>
+
+<p>El bus de datos permite transferir información a una localización particular de la <code>memoria</code> o a un dispositivo de E/S.</p>
+
+<h4 id="bus-de-dirección">Bus de Dirección</h4>
+
+<p>Este bus asigna una dirección a la localización de la <code>memoria</code> o ya sea la dirección de un dispositivo de E/S para poder identificarlo, por lo tanto, cuando se requiera hacer una búsqueda de un dispositivo o  una asignación de <code>memoria</code>, se hará en base a la dirección asignada.</p>
+
+<p>Un CPU en una sola linea de bus de dirección podría acceder a 2 direcciones ( 0 y 1). Entonces con n lineas de dirección se podría decir que el procesador puede acceder a <em>2^n</em> direcciones. Por lo que la cantidad de bits en el bus de direcciones determina la cantidad máxima de <code>memoria</code> direccionable y la cantidad de ubicaciones de E/S.</p>
+
+<h4 id="bus-de-control">Bus de Control</h4>
+
+<p>Es la colección intermedia de señales que controlan como el CPU se comunica con el resto del sistema. El CPU usa dos lineas en el bus de control, de escritura y lectura. Ambas sirven para determinar el flujo de datos del CPU a la <code>memoria</code> o de la <code>memoria</code> a la CPU.</p>
+
+<p>Cuando el CPU requiere escribir datos da una señal a la linea de escritura, y en el caso de que solo quiera leer datos de la <code>memoria</code> manda una señal a la linea de lectura. Existen mas lineas dentro del bus de control como la linea del reloj, las linea de interrupción, las lineas de habilitación de bytes y la linea de estado, pero estas pueden variar de acuerdo a la <code>arquitectura</code>.</p>
+
+<h2 id="organización-física-de-la-memoria">Organización Física de la <code>memoria</code></h2>
+
+<p>Un CPU ocupa un máximo de <em>2^n</em> ubicaciones de <code>memoria</code> en donde n es el numero de bits en el bus de direcciones.</p>
+
+<blockquote>
+<p>Pero&hellip;. ¿Que es una ubicación de <code>memoria</code>?</p>
+</blockquote>
+
+<p>Para entenderlo debes de saber primero que la familia 80X86 admite direcciones de <code>memoria</code>, y se tiene entendido que la unidad basca de <code>memoria</code> son los bytes, por lo que cada ubicación de <code>memoria</code> ocupa un byte.  Actualmente casi todas las familias de CPU son direccionables pero como en casi todo existen algunas excepciones y es el caso de las direcciones  que son partidas en pedazos como son las palabras doble o cuátruples.</p>
+
+<p>La <code>memoria</code> se podría decir que es como una matriz de bytes en donde su primera dirección es 0 y la ultima es <em>2^n</em> - 1.</p>
+
+<p>Ejemplo:</p>
+
+<blockquote>
+<p>Se le asigna una ubicación de <code>memoria</code>, en este caso será la [125] en donde su valor será igual a 0, por lo que se hará una escritura:</p>
+</blockquote>
+
+<p><center>
+    <img class="special-img-class" src="/img/capitulo6/c_2.png" width="400" />
+</center></p>
+
+<blockquote>
+<p>Basándonos en el mismo caso, pero ahora en forma contraria, para hacer una lectura se buscara la dirección 125 dentro de la <code>memoria</code> a través del bus de control.</p>
+</blockquote>
+
+<p><center>
+    <img class="special-img-class" src="/img/capitulo6/c_4.png" width="400" />
+</center></p>
+
+<h2 id="bit-data-buses">Bit - Data Buses</h2>
+
+<p>Una matriz de <code>memoria</code> direccionable es aquella en la que la CPU puede direccionar la <code>memoria</code> en fragmentos tan pequeños como un byte. Por lo que si se desea acceder un valor de 4 bits en un espacio de <code>memoria</code> se ocuparan los 4 bits y se dejaran en blanco los otros 4 bits, debido a que un byte es la menor unidad.</p>
+
+<p>Por otra parte, cada dirección son enteros, esto quiere decir que no se puede acceder a una dirección 12.3 o 14.2, si no que solo se puede acceder a direcciones como 12, 7 , 0.</p>
+
+<h3 id="8-bit-data-buses">8-Bit Data Buses</h3>
+
+<p>Ahora, hablando un poco de los CPU. Un procesador con 8-bit de bus (como el 8088) puede transferir 8 bits de datos a la vez, debido a que cada dirección de <code>memoria</code> corresponde a un byte de 8 bits, este tipo de bus resulta ser dentro de las <code>arquitectura</code>s el mas común.</p>
+
+<p><center>
+    <img class="special-img-class" src="/img/capitulo6/c_5.png" width="400" />
+</center></p>
+
+<h3 id="16-bit-data-buses-cpu-s-8086-80286-y-arm">16-Bit Data Buses ( <code>CPU's</code> - 8086, 80286 y ARM)</h3>
+
+<p>Este tipo de CPU permite acceder al doble de <code>memoria</code> en la misma cantidad de tiempo que el de 8-Bit, ademas de que permite organiza la <code>memoria</code> en &ldquo;par&rdquo; e &ldquo;impar&rdquo;.
+<center>
+    <img class="special-img-class" src="/img/capitulo6/c_6.png" width="400" />
+</center></p>
+
+<blockquote>
+<p>¿Como funciona?</p>
+</blockquote>
+
+<p>El procesador obtiene el byte LO del valor de la dirección especifica y el byte HO da la siguiente dirección.</p>
+
+<p><center>
+    <img class="special-img-class" src="/img/capitulo6/c_7.png" width="400" />
+</center></p>
+
+<p><em>Problemas:</em>
+* Puede provocar conflictos a la hora de realizar escritura y lectura.
+* Al acceder palabras, debido a que accede a 2 bytes separados, cada uno contiene una dirección de bytes aparte.</p>
+
+<h3 id="32-bit-data-buses-cpu-s-80386-y-80486">32-Bit Data Buses ( <code>CPU's</code> - 80386 y 80486 )</h3>
+
+<p>En su funcionamiento se requiere de al menos 2 operaciones de <code>memoria</code> de procesadores de 16-bit. Se accede a una cantidad de 32 Bits en una dirección impar, un procesador de 16-Bit puede realizar 3 operaciones de <code>memoria</code> para acceder a los datos.   Un CPU de 32 bits utilizan 4 bancos de <code>memoria</code> conectados y pude acceder a una palabra de <code>memoria</code> usando solo una operación de <code>memoria</code>.</p>
+
+<p><center>
+    <img class="special-img-class" src="/img/capitulo6/c_8.png" width="400" />
+</center></p>
+
+<p>La interfaz de <code>memoria</code> de 32 bits puede acceder a cualquier byte con una operación de <code>memoria</code>. En esta interfaz la dirección ubicada en el bus de direcciones es siempre un múltiplo de 4, en el cual el CPU seleccionara cual de los 4 bytes desea acceder.</p>
+
+<h3 id="64-bit-data-buses">64-Bit Data Buses</h3>
+
+<p>Proporcionan un bus de datos de 64 bits y una <code>memoria</code> cache que redice el impacto del acceso de datos no alineados.</p>
+
+<h2 id="big-endian-versus-little-endian-organization">Big Endian Versus Little Endian Organization</h2>
+
+<p>Como los diferentes procesadores almacenan objetos de múltiples bytes en la <code>memoria</code> direccionabe por bytes, ademas cuando existen objetos de 8 bits, todo se vuelve mas complicado ya que existen diferentes <code>CPU's</code> que organizan los bytes de distinta forma.</p>
+
+<p>El byte LO que aporta el componente mas pequeño de un numero binario se ubica en las posiciones de bit 0 a 7 y aparecen en la dirección mas baja.</p>
+
+<p><center>
+    <img class="special-img-class" src="/img/capitulo6/c_9.png" width="400" />
+</center></p>
+
+<p>Pero existen algunos <code>CPU's</code> como los de la apple Macintosh y la mayoría de los UNIX que invierten las direcciones de los bytes de una palabra doble.</p>
+
+<p>Intel por su parte organiza los bytes de distinta forma, la cual es mejor conocida como Little Edian. Mientras que su forma alternativa es el Big Edian.
+De acuerdo a estas dos formas se habla de que existen sexos o géneros, debido a que la información obtenida de una es deferente a la otra. También se habla de una comparación para saber cual es mejor pero la verdad es que eso es lo de menos ya que existen problemas entre ambas formas a la hora de transmitir información.</p>
+
+<p>Por lo que al hacer una transferencia de información de datos entre ambas, lo mejor es realizar conversiones a una forma canónica, y en el caso de que esto no sea suficiente lo mejor es hacer una conversión a la forma local ( Ya sea Little Edian o Big Edian).</p>
+
+<p>Ejemplo:</p>
+
+<p>La representacion binaria de la palabra doble 256:
+<center>
+    <img class="special-img-class" src="/img/capitulo6/c_11.png" width="400" />
+</center></p>
+
+<p><em>Little Edian:</em></p>
+
+<p><center>
+    <img class="special-img-class" src="/img/capitulo6/c_12.png" width="400" />
+</center></p>
+
+<p><em>Big Edian:</em>
+<center>
+    <img class="special-img-class" src="/img/capitulo6/c_13.png" width="400" />
+</center></p>
+
+<h2 id="el-reloj-del-sistema">El reloj del Sistema</h2>
+
+<p>Los sistemas requieren de cierto tiempo para realizar las tareas. En las <code>arquitectura</code>s <code>VNA</code>, las operaciones se serializan, esto quiere decir que las tareas se ejecutan en base a un orden y todo esto en parte es gracias al reloj del sistema.</p>
+
+<p>Ademas, el reloj del sistema es una señal eléctrica en el bus de control que se alterna entre 0 y 1 a una velocidad periódica, dicha señal marca un periodo que también es llamado ciclo del reloj.</p>
+
+<p><center>
+    <img class="special-img-class" src="/img/capitulo6/c_14.png" width="400" />
+</center></p>
+
+<p>Por otra parte la frecuencia con la que  se alterna entre 0 y 1 se le llama frecuencia del reloj del sistema.El periodo del reloj es reciproco a la frecuencia del reloj.</p>
+
+<p>Por ejemplo:</p>
+
+<blockquote>
+<p>1 MHz de frecuencia del reloj tendría un periodo de reloj de un microsegundo (una milésima de segundo) o 16 Hz tendrían un periodo de reloj de un nano segundo (mil millonésimas de segundo).</p>
+</blockquote>
+
+<h2 id="acceso-a-la-memoria">Acceso a la <code>memoria</code></h2>
+
+<p>El acceso a la <code>memoria</code> es una operación que sincroniza el reloj del sistema y que permite el acceso a la misma <code>memoria</code> en cada ciclo del reloj.</p>
+
+<p>El tiempo de acceso a la <code>memoria</code> es el numero de ciclos del reloj entre lo que es una solicitud de <code>memoria</code> y la finalización de la operación.</p>
+
+<p>Por otra parte, cuando se lee desde la <code>memoria</code>, el tiempo de acceso a la <code>memoria</code> es el tiempo entre cuando el CPU ubica la dirección en el bus y el tiempo cuando el CPU toma los datos en el bus de datos.</p>
+
+<h3 id="estados-de-espera">Estados de Espera</h3>
+
+<p>Los estados de espera son un ciclo de reloj extra que da al dispositivo tiempo adicional para responder al CPU.</p>
+
+<p>Casi todos los <code>CPU's</code> proporcionan un PIN que permite la inserción de estados de espera, lo que permite a la <code>memoria</code> darle el suficiente tiempo a cada acceso.
+Pero cabe destacar que los estados de espera no son algo bueno observándolo desde el punto de vista de rendimiento debido a que mientras el CPU espera datos de la <code>memoria</code> no puede operar con dichos datos ya que al agregar estados de espera se duplica el tiempo requerido para obtener el acceso.</p>
+
+<h3 id="cpu-acceso-a-la-memoria">CPU Acceso a la <code>Memoria</code></h3>
+
+<p>Los <code>CPU's</code> tienen 2 o 3 formas de acceder a la <code>memoria</code> y los modos mas comunes en la actualidad son los directos, indirectos e indexados. El tener modos de <code>direccionamiento</code> de <code>memoria</code> hacen el acceso a la <code>memoria</code> mas flexible, ademas de que permiten el uso de menos instrucciones.</p>
+
+<h4 id="modo-de-direccionamiento-directo">Modo de <code>Direccionamiento</code> Directo</h4>
+
+<p>El <code>direccionamiento</code> directo codifica la dirección de <code>memoria</code> de una variable como parte de la instrucción de maquina real que accede a dicha variable.</p>
+
+<p><em>Usos:</em></p>
+
+<ul>
+<li>Puede ser implementado en un programa que ocupa variables estáticas globales</li>
+<li>Para acceder a variables cuya dirección de <code>memoria</code> se conoce antes de la ejecución.</li>
+</ul>
+
+<h4 id="modo-de-direccionamiento-indirecto">Modo de <code>Direccionamiento</code> Indirecto</h4>
+
+<p>Usa un registro para mantener una dirección de <code>memoria</code></p>
+
+<p><em>Ventajas:</em></p>
+
+<ul>
+<li>Puede encontrar el valor de una dirección indirecta en tiempo de ejecución</li>
+<li>Codifica que registro especifica a la dirección indirecta, lo que requiere menos bits que un <code>direccionamiento</code> directo.</li>
+</ul>
+
+<p><em>Desventajas:</em></p>
+
+<ul>
+<li>Pueden tomar una o mas instrucciones para cargar un registro con su dirección.</li>
+</ul>
+
+<h4 id="modo-de-direccionamiento-indexado">Modo de <code>Direccionamiento</code> Indexado</h4>
+
+<p>El modo de <code>direccionamiento</code> indexado combina el <code>direccionamiento</code> directo e indirecto.Codifica de forma directa y hace la ejecución como la indirecta.</p>
+
+<p><em>Usos:</em></p>
+
+<ul>
+<li>Para acceder a elementos arraylist</li>
+<li>Para acceder indirectamente a objetos como estructuras y registros.</li>
+</ul>
+
+<p><em>Ventajas:</em></p>
+
+<ul>
+<li>Puede especificar una dirección directamente dentro e una instrucción sin tener que otra instrucción separada.</li>
+</ul>
+
+<h4 id="modo-de-direccionamiento-indexado-a-escala">Modo de <code>Direccionamiento</code> indexado a escala</h4>
+
+<p>Provee de 2 facilidades mas que el <code>direccionamiento</code> indexado:</p>
+
+<ol>
+<li>Usar 2 registros para calcular la dirección efectiva.</li>
+<li>Capacidad de multiplicar uno de los dos registros por una constante común antes de calcular la dirección efectiva.</li>
+</ol>
+
+<p><em>Usos:</em></p>
+
+<ul>
+<li>Para acceder a elementos de matrices cuyos tamaños coinciden con las contantes de escalamiento.</li>
+</ul>
+
+              <hr>
+              <div class="related-posts">
+                <h5>Related Posts</h5>
+                
+              </div>
+            </div>
+          </div>
+          <hr>
+        <div class="disqus">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+
+    (function() {
+      
+      
+      if (window.location.hostname == "localhost")
+        return;
+
+      var disqus_shortname = '';
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</div>
+        </div>
+      </div>
+      
+    </div>
+
+    
+    <footer>
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted">&copy; All rights reserved. Powered by <a href="https://gohugo.io/">Hugo</a> and
+      <a href="https://github.com/anirbanmu/hugo-sustain-vitae">sustain-vitae</a> with ♥</p>
+    </div>
+  </div>
+</footer>
+<div class="footer"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://onahump.github.io/js/docs.min.js"></script>
+<script src="https://onahump.github.io/js/main.js"></script>
+
+<script src="https://onahump.github.io/js/ie10-viewport-bug-workaround.js"></script><!-- Syntax highlighting -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+  </body>
+</html>
