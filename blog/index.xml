@@ -6,76 +6,10 @@
     <description>Recent content in Blogs on Nahúm Ponce</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 08 Jul 2018 20:31:09 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 20 Dec 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://onahump.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Alta de dominios en Sentora</title>
-      <link>https://onahump.github.io/blog/sentoradomains/</link>
-      <pubDate>Sun, 08 Jul 2018 20:31:09 -0500</pubDate>
-      
-      <guid>https://onahump.github.io/blog/sentoradomains/</guid>
-      <description>En este Post aprenderemos como dar de alta dominios con Sentora desde nuestra cuenta de administrador y por consiguiente usar dichos dominios para la generacion de nuestros sitios con WordPress.
-Para poder empezar a trabajar, debemos de cumplir con los siguientes puntos:
- Tener instalado Sentora Tener una cuenta de administrador para crear nuestros dominios  Una vez cumplidos estos dos requisitos comenzemos a trabajar.
-Paso 1: Generar nuestro archivo base Antes de comenzar a trabajar con Sentora debemos de generar nuestro archivo base.</description>
-    </item>
-    
-    <item>
-      <title>Capítulo 7&amp;8 - Types &amp; Boolean Logic</title>
-      <link>https://onahump.github.io/blog/capitulo_7/</link>
-      <pubDate>Thu, 01 Feb 2018 00:35:06 -0600</pubDate>
-      
-      <guid>https://onahump.github.io/blog/capitulo_7/</guid>
-      <description>Pointer types Un apuntador es una variable de memoria que hace referencia a la direccion de un algun objeto.
-Ejemplo:
- i = 0;
-M [ i ] = 100;
- Un puntero es la abstraccion de una direccion de memoria, por lo que un lenguaje podria ocupar el puntero como un mecanismo que asigne el valor del puntero a la direccion de algun elemento de la memoria.
-Ademas los punteros hacen referenca a variables anonimas que estan alojadas en el heap (cabecero), la cual es la region reervada para el amacenamiento dinamico de la memoria.</description>
-    </item>
-    
-    <item>
-      <title>Capítulo 6 - Memory Organization and Access</title>
-      <link>https://onahump.github.io/blog/capitulo_6/</link>
-      <pubDate>Wed, 10 Jan 2018 00:35:06 -0600</pubDate>
-      
-      <guid>https://onahump.github.io/blog/capitulo_6/</guid>
-      <description>Los componentes Básicos del sistema A lo largo de la historia de la computación han existido distintas arquitecturas de sistemas, pero en la actualidad la principal ha sido la arquitectura de John Van Newman (VNA). Demasiados sistemas ocupan dicha arquitectura, como por ejemplo la familia 80X86. Esta arquitectura esta dividida en 3 componente principales:
- Unidad Central de Procesamiento (CPU) - Calcula todas las operaciones que ocurren en un sistema.</description>
-    </item>
-    
-    <item>
-      <title>Capítulo 5 - Character Representation</title>
-      <link>https://onahump.github.io/blog/capitulo5_character_representation/</link>
-      <pubDate>Wed, 03 Jan 2018 00:55:12 -0600</pubDate>
-      
-      <guid>https://onahump.github.io/blog/capitulo5_character_representation/</guid>
-      <description>Durante esta semana, estuve leyendo mas acerca del libro de Writing Great Code, por lo que ahora continue con el capítulo 5, el cual habla sobre la representación de caracteres. Durante la lectura te vas adentrando demasiado a como es que funcionan los caracteres y cual es su propósito.
-Ademas de que puede ampliar tu panorama, entendiendo un poco sobre las ventajas y desventajas que puedes encontrar al utilizar los distintos tipos de caracteres.</description>
-    </item>
-    
-    <item>
-      <title>Git rebase</title>
-      <link>https://onahump.github.io/blog/git_rebase/</link>
-      <pubDate>Wed, 27 Dec 2017 01:23:36 -0600</pubDate>
-      
-      <guid>https://onahump.github.io/blog/git_rebase/</guid>
-      <description>Hace 1 semana tuve la fortuna de tomar un curso en el cual nos enseñaron un poco de Git, una herramienta que ha tomado mucha fuerza en el desarrollo de software y la cual es verdaderamente poderosa.
-La verdad es que anteriormente ya había manejado este controlador de versiones y uno de los puntos que más se me dificultaba, era entender la parte del rebase. Por lo que el verlo durante el curso fue un gran suspiro de alivio para futuros proyectos.</description>
-    </item>
-    
-    <item>
-      <title>Capítulo 4 - Floating Point Representation</title>
-      <link>https://onahump.github.io/blog/capitulo4_floating_point/</link>
-      <pubDate>Tue, 26 Dec 2017 22:13:40 -0600</pubDate>
-      
-      <guid>https://onahump.github.io/blog/capitulo4_floating_point/</guid>
-      <description>Siguiendo con las reseñas del libro Writing Great Code, ahora hablaremos un poco sobre lo que ha sido el capítulo 4 en el cual conoceremos básicamente como es que trabaja la representación de punto flotante con nuestro programas o sistemas, ayudándonos también a los problemas que este puede provocar.
-Se dice que muchos de los programadores no entienden muy bien este concepto y cuáles son sus limitaciones, por lo que comenzaremos hablando sobre:</description>
-    </item>
     
     <item>
       <title>Writing Great Code: Capítulos 1 &amp; 2 </title>
